@@ -1,439 +1,184 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": []
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "pwCJcxbKWwyH",
-        "outputId": "779cabf7-ac87-4dd6-be3f-152c51dd1b73"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "22\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "Y\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 4\n",
-            "['• •']\n",
-            "['• •']\n",
-            "Want to Roll Again? Y/N\n",
-            "yy\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "x\n",
-            "Your Roll is 3\n",
-            "['• • •']\n",
-            "Want to Roll Again? Y/N\n",
-            "y\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 3\n",
-            "['• • •']\n",
-            "Want to Roll Again? Y/N\n",
-            "y\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 1\n",
-            "['•']\n",
-            "Want to Roll Again? Y/N\n",
-            "N\n",
-            "Thanks :)\n"
-          ]
-        }
-      ],
-      "source": [
-        "import random as rd\n",
-        "x=[[\"•\"],[\"• •\"],[\"• • •\"]]\n",
-        "y=[[\"• •\"],[\" • \"]]\n",
-        "z=[\"• •\"]\n",
-        "\n",
-        "def user_input():\n",
-        "    a=rd.randint(1,6)\n",
-        "    print(\"Roll The Dice .\")\n",
-        "    x=input(\"Enter x to Roll the Dice . ?\\n\")\n",
-        "    if x.lower() == \"x\":\n",
-        "        #print(a)\n",
-        "        if a == 1:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_1()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "\n",
-        "        elif a == 2:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_2()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "\n",
-        "        elif a == 3:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_3()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 4:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_4()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 5:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_5()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 6:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_6()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "    else:\n",
-        "        print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "        user_input()\n",
-        "\n",
-        "def roll_3():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 2:\n",
-        "            #Three\n",
-        "            print(f\"{i}\")\n",
-        "\n",
-        "def roll_1():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 0:\n",
-        "            #One\n",
-        "            print(f\"{i}\")\n",
-        "        break\n",
-        "\n",
-        "def roll_2():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 1:\n",
-        "            #Two\n",
-        "            print(f\"{i}\")\n",
-        "\n",
-        "def roll_4():\n",
-        "    for i in y:\n",
-        "        if y.index(i) == 1:\n",
-        "            break\n",
-        "        #Four\n",
-        "        print(f\"{i}\\n{i}\")\n",
-        "\n",
-        "\n",
-        "def roll_5():\n",
-        "    #Five\n",
-        "    print(f\"{z}\")\n",
-        "\n",
-        "    for i in y:\n",
-        "        if y.index(i) == 1:\n",
-        "            print(f\"{i}\")\n",
-        "            print(z)\n",
-        "\n",
-        "def roll_6():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 2:\n",
-        "            #Six\n",
-        "            print(f\"{i}\")\n",
-        "            print(i)\n",
-        "\n",
-        "user_input()"
-      ]
-    }
-  ]
-}{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": []
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "pwCJcxbKWwyH",
-        "outputId": "779cabf7-ac87-4dd6-be3f-152c51dd1b73"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "22\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "Y\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 4\n",
-            "['• •']\n",
-            "['• •']\n",
-            "Want to Roll Again? Y/N\n",
-            "yy\n",
-            "Wrong - Input..\n",
-            "TRY AGAIN\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "x\n",
-            "Your Roll is 3\n",
-            "['• • •']\n",
-            "Want to Roll Again? Y/N\n",
-            "y\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 3\n",
-            "['• • •']\n",
-            "Want to Roll Again? Y/N\n",
-            "y\n",
-            "Roll The Dice .\n",
-            "Enter x to Roll the Dice . ?\n",
-            "X\n",
-            "Your Roll is 1\n",
-            "['•']\n",
-            "Want to Roll Again? Y/N\n",
-            "N\n",
-            "Thanks :)\n"
-          ]
-        }
-      ],
-      "source": [
-        "import random as rd\n",
-        "x=[[\"•\"],[\"• •\"],[\"• • •\"]]\n",
-        "y=[[\"• •\"],[\" • \"]]\n",
-        "z=[\"• •\"]\n",
-        "\n",
-        "def user_input():\n",
-        "    a=rd.randint(1,6)\n",
-        "    print(\"Roll The Dice .\")\n",
-        "    x=input(\"Enter x to Roll the Dice . ?\\n\")\n",
-        "    if x.lower() == \"x\":\n",
-        "        #print(a)\n",
-        "        if a == 1:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_1()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "\n",
-        "        elif a == 2:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_2()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "\n",
-        "        elif a == 3:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_3()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 4:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_4()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 5:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_5()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "        elif a == 6:\n",
-        "            print(f\"Your Roll is {a}\")\n",
-        "            roll_6()\n",
-        "            i=input(\"Want to Roll Again? Y/N\\n\")\n",
-        "            if i.lower() == \"y\":\n",
-        "                user_input()\n",
-        "            elif i.lower()==\"n\":\n",
-        "                print(\"Thanks :)\")\n",
-        "                pass\n",
-        "            else:\n",
-        "                print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "                user_input()\n",
-        "\n",
-        "    else:\n",
-        "        print(\"Wrong - Input..\\nTRY AGAIN\")\n",
-        "        user_input()\n",
-        "\n",
-        "def roll_3():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 2:\n",
-        "            #Three\n",
-        "            print(f\"{i}\")\n",
-        "\n",
-        "def roll_1():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 0:\n",
-        "            #One\n",
-        "            print(f\"{i}\")\n",
-        "        break\n",
-        "\n",
-        "def roll_2():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 1:\n",
-        "            #Two\n",
-        "            print(f\"{i}\")\n",
-        "\n",
-        "def roll_4():\n",
-        "    for i in y:\n",
-        "        if y.index(i) == 1:\n",
-        "            break\n",
-        "        #Four\n",
-        "        print(f\"{i}\\n{i}\")\n",
-        "\n",
-        "\n",
-        "def roll_5():\n",
-        "    #Five\n",
-        "    print(f\"{z}\")\n",
-        "\n",
-        "    for i in y:\n",
-        "        if y.index(i) == 1:\n",
-        "            print(f\"{i}\")\n",
-        "            print(z)\n",
-        "\n",
-        "def roll_6():\n",
-        "    for i in x:\n",
-        "        if x.index(i) == 2:\n",
-        "            #Six\n",
-        "            print(f\"{i}\")\n",
-        "            print(i)\n",
-        "\n",
-        "user_input()"
-      ]
-    }
-  ]
-}
+
+
+import random as rd
+x=[["•"],["• •"],["• • •"]]
+y=[["• •"],[" • "]]
+z=["• •"]
+
+def user_input():
+    a=rd.randint(1,6)
+    print("Roll The Dice .")
+    x=input("Enter x to Roll the Dice . ?\n")
+    if x.lower() == "x":
+        #print(a)
+        if a == 1:
+            print(f"Your Roll is {a}")
+            roll_1()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+
+        elif a == 2:
+            print(f"Your Roll is {a}")
+            roll_2()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+
+        elif a == 3:
+            print(f"Your Roll is {a}")
+            roll_3()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+        elif a == 4:
+            print(f"Your Roll is {a}")
+            roll_4()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+        elif a == 5:
+            print(f"Your Roll is {a}")
+            roll_5()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+        elif a == 6:
+            print(f"Your Roll is {a}")
+            roll_6()
+            i=input("Want to Roll Again? Y/N\n")
+            if i.lower() == "y":
+                user_input()
+            elif i.lower()=="n":
+                print("Thanks :)")
+                pass
+            else:
+                print("Wrong - Input..\nTRY AGAIN")
+                user_input()
+
+    else:
+        print("Wrong - Input..\nTRY AGAIN")
+        user_input()
+
+def roll_3():
+    for i in x:
+        if x.index(i) == 2:
+            #Three
+            print(f"{i}")
+
+def roll_1():
+    for i in x:
+        if x.index(i) == 0:
+            #One
+            print(f"{i}")
+        break
+
+def roll_2():
+    for i in x:
+        if x.index(i) == 1:
+            #Two
+            print(f"{i}")
+
+def roll_4():
+    for i in y:
+        if y.index(i) == 1:
+            break
+        #Four
+        print(f"{i}\n{i}")
+
+
+def roll_5():
+    #Five
+    print(f"{z}")
+
+    for i in y:
+        if y.index(i) == 1:
+            print(f"{i}")
+            print(z)
+
+def roll_6():
+    for i in x:
+        if x.index(i) == 2:
+            #Six
+            print(f"{i}")
+            print(i)
+
+user_input()
+     
+Roll The Dice .
+Enter x to Roll the Dice . ?
+22
+Wrong - Input..
+TRY AGAIN
+Roll The Dice .
+Enter x to Roll the Dice . ?
+Y
+Wrong - Input..
+TRY AGAIN
+Roll The Dice .
+Enter x to Roll the Dice . ?
+X
+Your Roll is 4
+['• •']
+['• •']
+Want to Roll Again? Y/N
+yy
+Wrong - Input..
+TRY AGAIN
+Roll The Dice .
+Enter x to Roll the Dice . ?
+x
+Your Roll is 3
+['• • •']
+Want to Roll Again? Y/N
+y
+Roll The Dice .
+Enter x to Roll the Dice . ?
+X
+Your Roll is 3
+['• • •']
+Want to Roll Again? Y/N
+y
+Roll The Dice .
+Enter x to Roll the Dice . ?
+X
+Your Roll is 1
+['•']
+Want to Roll Again? Y/N
+N
+Thanks :)
